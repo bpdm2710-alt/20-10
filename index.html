@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Small Gift for A Cute Friend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Bộ sticker (SVG) dùng lại bằng <use href="#tên">: cat-sit, cat-loaf, daisy, tulip, heart -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="cat-sit" viewBox="0 0 100 100">
+      <path d="M70 86 C96 88 98 62 84 56" fill="none" stroke="#5b3a6e" stroke-width="12" stroke-linecap="round"/>
+      <path d="M70 86 C96 88 98 62 84 56" fill="none" stroke="#f6c28f" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="50" cy="74" rx="25" ry="22" fill="#f6c28f" stroke="#5b3a6e" stroke-width="3"/>
+      <ellipse cx="50" cy="79" rx="12" ry="14" fill="#fff3e6"/>
+      <path d="M29 33 L27 9 L45 23 Z" fill="#f6c28f" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M71 33 L73 9 L55 23 Z" fill="#f6c28f" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="50" cy="43" r="23" fill="#f6c28f" stroke="#5b3a6e" stroke-width="3"/>
+      <path d="M31 27 L30 16 L39 23 Z M69 27 L70 16 L61 23 Z" fill="#ffadc6"/>
+      <path d="M50 21 v7 M42 23 l2 6 M58 23 l-2 6" fill="none" stroke="#e08f55" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="40" cy="43" r="3" fill="#3b1d4a"/><circle cx="60" cy="43" r="3" fill="#3b1d4a"/>
+      <circle cx="41" cy="42" r="1" fill="#fff"/><circle cx="61" cy="42" r="1" fill="#fff"/>
+      <circle cx="35" cy="51" r="4" fill="#ff9fbd" opacity=".55"/><circle cx="65" cy="51" r="4" fill="#ff9fbd" opacity=".55"/>
+      <path d="M46.5 49 h7 l-3.5 4 z" fill="#e4477a"/>
+      <path d="M50 53 v2 M50 55 q-4 3.5 -8 0 M50 55 q4 3.5 8 0" fill="none" stroke="#5b3a6e" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M30 50 h-13 M30 54 l-12 3 M70 50 h13 M70 54 l12 3" fill="none" stroke="#5b3a6e" stroke-width="1.6" stroke-linecap="round"/>
+      <ellipse cx="40" cy="93" rx="9" ry="5.5" fill="#fff3e6" stroke="#5b3a6e" stroke-width="3"/>
+      <ellipse cx="60" cy="93" rx="9" ry="5.5" fill="#fff3e6" stroke="#5b3a6e" stroke-width="3"/>
+    </symbol>
+
+    <symbol id="cat-loaf" viewBox="0 0 100 100">
+      <path d="M84 82 C94 82 94 67 86 66" fill="none" stroke="#5b3a6e" stroke-width="12" stroke-linecap="round"/>
+      <path d="M84 82 C94 82 94 67 86 66" fill="none" stroke="#fffaf5" stroke-width="6" stroke-linecap="round"/>
+      <ellipse cx="56" cy="76" rx="38" ry="20" fill="#fffaf5" stroke="#5b3a6e" stroke-width="3"/>
+      <ellipse cx="68" cy="68" rx="14" ry="8" fill="#e1d0f5"/>
+      <path d="M14 58 L12 38 L28 50 Z" fill="#fffaf5" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M46 58 L48 38 L32 50 Z" fill="#fffaf5" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="30" cy="66" r="20" fill="#fffaf5" stroke="#5b3a6e" stroke-width="3"/>
+      <path d="M15 52 L14 44 L22 49 Z M45 52 L46 44 L38 49 Z" fill="#ffadc6"/>
+      <path d="M21 66 q4 4 8 0 M33 66 q4 4 8 0" fill="none" stroke="#5b3a6e" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="20" cy="73" r="3.5" fill="#ff9fbd" opacity=".55"/><circle cx="40" cy="73" r="3.5" fill="#ff9fbd" opacity=".55"/>
+      <path d="M27.5 71 h5 l-2.5 3 z" fill="#e4477a"/>
+      <path d="M64 30 h12 l-12 14 h12" fill="none" stroke="#8e4cb8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M80 14 h8 l-8 10 h8" fill="none" stroke="#8e4cb8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="daisy" viewBox="0 0 100 100">
+      <path d="M50 52 C48 70 52 84 50 98" fill="none" stroke="#4f9b57" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50 82 C36 78 30 70 32 62 C44 62 50 70 50 82 Z" fill="#8fd18f" stroke="#4f9b57" stroke-width="2"/>
+      <g fill="#fff" stroke="#d2a9e6" stroke-width="2">
+        <ellipse cx="50" cy="22" rx="8" ry="15"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(45 50 38)"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(90 50 38)"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(135 50 38)"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(180 50 38)"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(225 50 38)"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(270 50 38)"/>
+        <ellipse cx="50" cy="22" rx="8" ry="15" transform="rotate(315 50 38)"/>
+      </g>
+      <circle cx="50" cy="38" r="9" fill="#ffcf4d" stroke="#e0a52a" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="tulip" viewBox="0 0 100 100">
+      <path d="M50 60 L50 98" fill="none" stroke="#4f9b57" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50 96 C30 90 24 72 28 60 C42 68 50 80 50 96 Z" fill="#8fd18f" stroke="#4f9b57" stroke-width="2"/>
+      <path d="M50 96 C70 90 76 72 72 60 C58 68 50 80 50 96 Z" fill="#8fd18f" stroke="#4f9b57" stroke-width="2"/>
+      <path d="M28 22 C28 50 38 62 50 62 C62 62 72 50 72 22 L61 33 L50 16 L39 33 Z" fill="#ff7fa8" stroke="#c2386a" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M50 16 L39 33 C42 48 46 56 50 62 C54 56 58 48 61 33 Z" fill="#ff9fbd"/>
+    </symbol>
+
+    <symbol id="heart" viewBox="0 0 100 100">
+      <path d="M50 88 C8 58 12 20 36 20 C45 20 50 28 50 33 C50 28 55 20 64 20 C88 20 92 58 50 88 Z" fill="#ff8fb3" stroke="#c2386a" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M30 34 C28 40 30 46 34 50" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    </symbol>
+  </defs>
+</svg>
+<main class="stage" id="app">
+
+  <!-- HÀNG TRÊN: ảnh 1 (góc trái) - hoa - ảnh 2 (góc phải) -->
+  <div class="row top">
+    <figure class="photo p1">
+      <!-- CHÈN ẢNH 1: bỏ ảnh vào folder images/ rồi đổi tên file ở src -->
+      <div class="slot"><span>Ảnh 1</span><img src="images/anh1.jpg" alt="Ảnh kỷ niệm 1" onerror="this.remove()"></div>
+      <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
+    </figure>
+
+    <svg class="flower bud" viewBox="0 0 200 200" role="img" aria-label="Một bông hoa đang chờ nở">
+      <g id="petals"></g>
+      <circle class="core" cx="100" cy="100" r="11"/>
+    </svg>
+
+    <figure class="photo p2">
+      <!-- CHÈN ẢNH 2 -->
+      <div class="slot"><span>Ảnh 2</span><img src="images/anh2.jpg" alt="Ảnh kỷ niệm 2" onerror="this.remove()"></div>
+      <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#heart"/></svg>
+    </figure>
+  </div>
+
+  <header class="intro">
+    <h1 id="title">Chúc mừng 20/10</h1>
+    <p class="sub" id="sub">Có một món quà nhỏ đang chờ em.</p>
+    <button id="open" type="button">Mở quà</button>
+  </header>
+
+  <!-- 4 LÁ THƯ DẠNG RUY BĂNG: bấm ruy băng thì thư trải xuống -->
+  <section class="letters" id="letters" aria-label="Bốn lá thư">
+    <!-- STICKER: mèo ngồi trên ruy băng đầu tiên -->
+    <svg class="sticker s-cat-top" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-sit"/></svg>
+    <!-- STICKER hai bên (chỉ hiện trên màn hình rộng) -->
+    <svg class="sticker side s-l1" viewBox="0 0 100 100" aria-hidden="true"><use href="#tulip"/></svg>
+    <svg class="sticker side s-l2" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-sit"/></svg>
+    <svg class="sticker side s-r1" viewBox="0 0 100 100" aria-hidden="true"><use href="#heart"/></svg>
+    <svg class="sticker side s-r2" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
+
+    <article class="letter">
+      <button class="ribbon" id="r1" type="button" aria-expanded="false" aria-controls="p-1">Cảm ơn em</button>
+      <div class="unroll" id="p-1" role="region" aria-labelledby="r1">
+        <div class="unroll-inner"><div class="paper">
+          <p>Hôm nay là 20/10, nhưng điều anh muốn nói không chỉ dành cho riêng hôm nay.</p>
+          <p>Cảm ơn em vì đã kiên nhẫn với những lúc anh vụng về, vì những cuộc trò chuyện kéo dài hơn dự định, và vì đã làm cho những ngày bình thường trở nên đáng nhớ.</p>
+        </div></div>
+      </div>
+    </article>
+
+    <article class="letter">
+      <button class="ribbon" id="r2" type="button" aria-expanded="false" aria-controls="p-2">Điều anh nhớ</button>
+      <div class="unroll" id="p-2" role="region" aria-labelledby="r2">
+        <div class="unroll-inner"><div class="paper">
+          <p>Có những khoảnh khắc rất nhỏ mà anh vẫn nhớ: một câu nói đùa, một buổi chiều đi cùng nhau, một lần em cười vì chuyện chẳng đâu vào đâu.</p>
+          <p>Với anh, chính những điều đó làm nên chúng mình.</p>
+        </div></div>
+      </div>
+    </article>
+
+    <article class="letter">
+      <button class="ribbon" id="r3" type="button" aria-expanded="false" aria-controls="p-3">Lời chúc</button>
+      <div class="unroll" id="p-3" role="region" aria-labelledby="r3">
+        <div class="unroll-inner"><div class="paper">
+          <ul class="wishes">
+            <li>Chúc em ngủ đủ giấc và ăn thật ngon miệng.</li>
+            <li>Chúc mọi deadline của em đều dễ thở hơn em nghĩ.</li>
+            <li>Và luôn có anh ở bên mỗi khi em cần.</li>
+          </ul>
+        </div></div>
+      </div>
+    </article>
+
+    <article class="letter">
+      <button class="ribbon" id="r4" type="button" aria-expanded="false" aria-controls="p-4">Lời hứa</button>
+      <div class="unroll" id="p-4" role="region" aria-labelledby="r4">
+        <div class="unroll-inner"><div class="paper">
+          <p>Anh hứa sẽ lắng nghe nhiều hơn, bớt vụng về hơn, và luôn nhớ rằng em cũng đang cố gắng mỗi ngày.</p>
+          <p>Anh không giỏi nói lời hoa mỹ, nên anh làm món quà này bằng thứ anh biết làm: một trang web. Mong em thích nó.</p>
+          <p class="sign" id="sign">Từ anh</p>
+        </div></div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- HÀNG DƯỚI: ảnh 3 (góc trái) - ngày - ảnh 4 (góc phải) -->
+  <div class="row bottom">
+    <figure class="photo p3">
+      <!-- CHÈN ẢNH 3 -->
+      <div class="slot"><span>Ảnh 3</span><img src="images/anh3.jpg" alt="Ảnh kỷ niệm 3" onerror="this.remove()"></div>
+      <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#tulip"/></svg>
+    </figure>
+
+    <div class="foot">
+      <!-- STICKER: mèo ngủ trên dòng ngày -->
+      <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-loaf"/></svg>
+      <div class="date">20 tháng 10</div>
+    </div>
+
+    <figure class="photo p4">
+      <!-- CHÈN ẢNH 4 -->
+      <div class="slot"><span>Ảnh 4</span><img src="images/anh4.jpg" alt="Ảnh kỷ niệm 4" onerror="this.remove()"></div>
+      <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
+    </figure>
+  </div>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
