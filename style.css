@@ -33,6 +33,7 @@ body{
   position:relative; margin:0; width:var(--ps); aspect-ratio:4/5;
   background:#fff; padding:6px; border-radius:6px;
   box-shadow:0 10px 26px rgba(120,60,150,.2);
+  transform:rotate(var(--rot,0deg));
 }
 .slot{
   position:relative; width:100%; height:100%; overflow:hidden; border-radius:3px;
@@ -41,8 +42,8 @@ body{
   color:var(--muted); font-size:.85rem;
 }
 .slot img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
-.p1{transform:rotate(-5deg)} .p2{transform:rotate(4deg)}
-.p3{transform:rotate(4deg)}  .p4{transform:rotate(-4deg)}
+.p1{--rot:-5deg} .p2{--rot:4deg}
+.p3{--rot:4deg}  .p4{--rot:-4deg}
 
 /* ===== Hoa ===== */
 .flower{width:clamp(110px, 30vw, 190px); height:auto; display:block}
@@ -173,4 +174,23 @@ h1{
   .s-l2{width:84px; left:-112px; top:150px}
   .s-r1{width:52px; right:-80px; top:20px;  transform:rotate(12deg)}
   .s-r2{width:70px; right:-98px; top:150px; transform:rotate(8deg)}
+}
+
+/* ===== Khung ảnh nằm ngang: thêm class "landscape" cho <figure class="photo"> ===== */
+.photo.landscape{width:calc(var(--ps) * 1.4); aspect-ratio:5/4}
+
+/* ===== Ảnh 3 và 4: ẩn lúc đầu, hiện lần lượt sau khi bấm "Mở quà" ===== */
+.p3,.p4{
+  opacity:0; visibility:hidden;
+  transform:rotate(var(--rot)) translateY(26px) scale(.92);
+  transition:opacity 1s ease var(--pd), transform 1s cubic-bezier(.2,.8,.2,1) var(--pd),
+             visibility 0s linear var(--pd);
+}
+.p3{--pd:1.2s}
+.p4{--pd:1.7s}
+.opened .p3,.opened .p4{
+  opacity:1; visibility:visible; transform:rotate(var(--rot));
+}
+@media (prefers-reduced-motion:reduce){
+  .p3,.p4{transition-duration:.01s; transition-delay:0s}
 }
