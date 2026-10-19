@@ -15,8 +15,8 @@
 *{box-sizing:border-box}
 body{
   margin:0; min-height:100vh; color:var(--ink);
-  font-family:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
-  font-weight:300; line-height:1.75; overflow-x:hidden;
+  font-family:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-weight:400; line-height:1.75; overflow-x:hidden;
   background-color:var(--bg);
   background-image:radial-gradient(ellipse at 50% 12%, var(--glow), transparent 65%);
 }
@@ -60,8 +60,8 @@ body{
 /* ===== Tiêu đề + nút ===== */
 .intro{text-align:center; margin-top:20px}
 h1{
-  font-family:"Playfair Display",Georgia,"Times New Roman",serif;
-  font-weight:500; font-size:clamp(2.1rem,8.5vw,3.2rem); line-height:1.15;
+  font-family:"Baloo 2","Nunito",system-ui,sans-serif;
+  font-weight:700; font-size:clamp(2.2rem,9vw,3.4rem); line-height:1.15;
   margin:0 0 10px; letter-spacing:-.01em;
 }
 .sub{color:var(--muted); margin:0 auto 22px; max-width:36ch}
@@ -103,6 +103,7 @@ h1{
 
 /* thư trải xuống */
 .unroll{
+  position:relative; z-index:3;   /* thư nằm TRÊN sticker (sticker z-index:2) */
   display:grid; grid-template-rows:0fr; visibility:hidden;
   transition:grid-template-rows .8s cubic-bezier(.3,.7,.2,1), visibility 0s linear .8s;
 }
@@ -112,8 +113,8 @@ h1{
 .paper{
   margin:0 14px; padding:22px 24px 6px;
   background:#fffafd; border:1px solid var(--line); border-top:0;
-  font-family:"Playfair Display",Georgia,serif; font-weight:500;
-  font-size:1.05rem; line-height:1.85;
+  font-family:"Mali","Nunito",system-ui,sans-serif; font-weight:400;
+  font-size:1.02rem; line-height:1.9;
 }
 .paper p{margin:0 0 1em}
 .paper::after{ /* trục cuộn ở cuối thư */
@@ -256,9 +257,11 @@ h1{
   .extra{--edge:clamp(24px,6vw,140px); width:min(300px, calc(100% - var(--edge) - 16px))}
   .extra-left {grid-column:1; grid-row:1; justify-self:start; margin-left:var(--edge);  margin-top:-60px}
   .extra-right{grid-column:3; grid-row:1; justify-self:end;   margin-right:var(--edge); margin-top:-110px}
-  /* sticker nằm bên dưới hộp thư */
-  .extra-right .x1{top:300px; left:30px}  .extra-right .x2{top:330px; left:130px}
-  .extra-left  .x1{top:300px; left:70px}  .extra-left  .x2{top:320px; left:150px}
+  /* sticker nằm SAU hộp thư, chỉ nhô ra ngoài mép (khi thư mở sẽ che bớt) */
+  .extra-right .x1{top:300px; left:-14px}
+  .extra-right .x2{top:360px; left:auto; right:-18px}
+  .extra-left  .x1{top:300px; left:-16px}
+  .extra-left  .x2{top:350px; left:auto; right:-34px}
 }
 /* sticker sát lá thư giữa chỉ hiện khi màn hình thật rộng, tránh đè lên 2 hộp thư */
 @media (min-width:1280px) and (max-width:1599px){ .side{display:none} }
@@ -266,3 +269,6 @@ h1{
 @media (prefers-reduced-motion:reduce){
   .blob,.fly,.gift,.extra.show .letter,.extra.show .ribbon{animation:none}
 }
+
+/* ===== Font: tiêu đề / ruy băng / nút = Baloo 2, chữ thường = Nunito, lá thư = Mali ===== */
+.ribbon,#open{font-family:"Baloo 2","Nunito",system-ui,sans-serif; font-weight:600; font-size:1.05rem}
