@@ -78,8 +78,24 @@
       <path d="M50 88 C8 58 12 20 36 20 C45 20 50 28 50 33 C50 28 55 20 64 20 C88 20 92 58 50 88 Z" fill="#ff8fb3" stroke="#c2386a" stroke-width="3" stroke-linejoin="round"/>
       <path d="M30 34 C28 40 30 46 34 50" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
     </symbol>
+    <symbol id="butterfly" viewBox="0 0 100 100">
+      <path d="M50 48 C30 10 6 14 10 40 C12 56 34 58 50 48 Z M50 48 C70 10 94 14 90 40 C88 56 66 58 50 48 Z" fill="#ffb3d1" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M50 52 C34 60 20 78 32 88 C42 94 52 70 50 52 Z M50 52 C66 60 80 78 68 88 C58 94 48 70 50 52 Z" fill="#d9b8ff" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <ellipse cx="50" cy="52" rx="3.5" ry="16" fill="#5b3a6e"/>
+      <path d="M48 38 q-6 -12 -12 -14 M52 38 q6 -12 12 -14" fill="none" stroke="#5b3a6e" stroke-width="2.5" stroke-linecap="round"/>
+    </symbol>
+
+    <symbol id="gift" viewBox="0 0 100 100">
+      <rect x="18" y="46" width="64" height="44" rx="4" fill="#ff9fbd" stroke="#5b3a6e" stroke-width="3"/>
+      <rect x="12" y="32" width="76" height="18" rx="4" fill="#ffc4d8" stroke="#5b3a6e" stroke-width="3"/>
+      <rect x="44" y="32" width="12" height="58" fill="#f0b94d" stroke="#5b3a6e" stroke-width="3"/>
+      <path d="M50 32 C34 8 14 18 28 30 C34 34 44 34 50 32 C56 34 66 34 72 30 C86 18 66 8 50 32 Z" fill="#f0b94d" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="50" cy="32" r="5" fill="#f6c35b" stroke="#5b3a6e" stroke-width="3"/>
+    </symbol>
   </defs>
 </svg>
+<!-- NỀN ĐỘNG: 3 vệt màu trôi chậm; sao lấp lánh + tim bay do script.js tạo -->
+<div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
 <main class="stage" id="app">
 
   <!-- HÀNG TRÊN: ảnh 1 (góc trái) - hoa - ảnh 2 (góc phải) -->
@@ -94,6 +110,9 @@
       <g id="petals"></g>
       <circle class="core" cx="100" cy="100" r="11"/>
     </svg>
+    <!-- CHI TIẾT: hai chú bướm bay quanh bông hoa -->
+    <svg class="sticker fly f1" viewBox="0 0 100 100" aria-hidden="true"><use href="#butterfly"/></svg>
+    <svg class="sticker fly f2" viewBox="0 0 100 100" aria-hidden="true"><use href="#butterfly"/></svg>
 
     <figure class="photo p2">
       <!-- CHÈN ẢNH 2 -->
@@ -109,6 +128,10 @@
   </header>
 
   <!-- 4 LÁ THƯ DẠNG RUY BĂNG: bấm ruy băng thì thư trải xuống -->
+  <div class="mid">
+  <!-- CHI TIẾT: hộp quà lắc lư ở chỗ trống, biến mất khi bấm Mở quà -->
+  <svg class="sticker gift" viewBox="0 0 100 100" aria-hidden="true"><use href="#gift"/></svg>
+
   <section class="letters" id="letters" aria-label="Bốn lá thư">
     <!-- STICKER: mèo ngồi trên ruy băng đầu tiên -->
     <svg class="sticker s-cat-top" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-sit"/></svg>
@@ -122,8 +145,8 @@
       <button class="ribbon" id="r1" type="button" aria-expanded="false" aria-controls="p-1">Cảm ơn em</button>
       <div class="unroll" id="p-1" role="region" aria-labelledby="r1">
         <div class="unroll-inner"><div class="paper">
-          <p>Hôm nay là 20/10, nhưng điều anh muốn nói không chỉ dành cho riêng hôm nay.</p>
-          <p>Cảm ơn em vì đã kiên nhẫn với những lúc anh vụng về, vì những cuộc trò chuyện kéo dài hơn dự định, và vì đã làm cho những ngày bình thường trở nên đáng nhớ.</p>
+          <p>Hôm nay là 20/10, tui chúc bạn sẽ luôn mạnh khỏe nè, luôn hạnh phúc nè.</p>
+          <p>Chúc bạn sẽ ngày càng xinh đẹp hơn nữa.</p>
         </div></div>
       </div>
     </article>
@@ -163,6 +186,43 @@
     </article>
 
   </section>
+
+  <!-- 2 LÁ THƯ BÍ MẬT: mở đủ 4 lá ở giữa thì hiện lá BÊN PHẢI; mở lá phải thì hiện lá BÊN TRÁI.
+       Bố cục giống "Lời chúc". Sửa tiêu đề ruy băng và các dòng <li> bên dưới. -->
+  <aside class="extra extra-right" id="extra-right">
+    <svg class="sticker x1" viewBox="0 0 100 100" aria-hidden="true"><use href="#heart"/></svg>
+    <svg class="sticker x2" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
+    <article class="letter">
+      <button class="ribbon" id="r5" type="button" aria-expanded="false" aria-controls="p-5">Còn một điều nữa</button>
+      <div class="unroll" id="p-5" role="region" aria-labelledby="r5">
+        <div class="unroll-inner"><div class="paper">
+          <ul class="wishes">
+            <li>[Nội dung dòng 1]</li>
+            <li>[Nội dung dòng 2]</li>
+            <li>[Nội dung dòng 3]</li>
+          </ul>
+        </div></div>
+      </div>
+    </article>
+  </aside>
+
+  <aside class="extra extra-left" id="extra-left">
+    <svg class="sticker x1" viewBox="0 0 100 100" aria-hidden="true"><use href="#tulip"/></svg>
+    <svg class="sticker x2" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-sit"/></svg>
+    <article class="letter">
+      <button class="ribbon" id="r6" type="button" aria-expanded="false" aria-controls="p-6">Lời cuối</button>
+      <div class="unroll" id="p-6" role="region" aria-labelledby="r6">
+        <div class="unroll-inner"><div class="paper">
+          <ul class="wishes">
+            <li>[Nội dung dòng 1]</li>
+            <li>[Nội dung dòng 2]</li>
+            <li>[Nội dung dòng 3]</li>
+          </ul>
+        </div></div>
+      </div>
+    </article>
+  </aside>
+  </div>
 
   <!-- HÀNG DƯỚI: ảnh 3 (góc trái) - ngày - ảnh 4 (góc phải) -->
   <div class="row bottom">

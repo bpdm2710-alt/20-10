@@ -49,6 +49,20 @@
   var ribbons = document.querySelectorAll('.ribbon');
   function panelOf(btn){ return document.getElementById(btn.getAttribute('aria-controls')); }
 
+  // Mở đủ 4 lá giữa -> hiện lá bên phải; mở lá bên phải (r5) -> hiện lá bên trái
+  var seen = {}, rightOn = false, leftOn = false;
+  var mids = document.querySelectorAll('.letters .ribbon');
+  function showExtra(id){
+    setTimeout(function(){ document.getElementById(id).classList.add('show'); }, 1000);
+  }
+  function unlock(btn){
+    seen[btn.id] = true;
+    if (!rightOn && Array.prototype.every.call(mids, function(b){ return seen[b.id]; })){
+      rightOn = true; showExtra('extra-right');
+    }
+    if (btn.id === 'r5' && !leftOn){ leftOn = true; showExtra('extra-left'); }
+  }
+
   ribbons.forEach(function(btn){
     btn.addEventListener('click', function(){
       var willOpen = btn.getAttribute('aria-expanded') !== 'true';
@@ -60,6 +74,7 @@
 
       if (willOpen){
         btn.setAttribute('aria-expanded', 'true');
+        unlock(btn);
         panelOf(btn).classList.add('open');
         setTimeout(function(){
           panelOf(btn).scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'nearest'});
@@ -67,4 +82,29 @@
       }
     });
   });
+
+  // Nền động: sao lấp lánh + tim bay lên
+  var bg = document.querySelector('.bg');
+  if (bg && !reduce){
+    for (var a = 0; a < 26; a++){
+      var sp = document.createElement('i'); sp.className = 'spark';
+      sp.style.left = (Math.random() * 100) + '%'; sp.style.top = (Math.random() * 100) + '%';
+      var z = 6 + Math.random() * 10; sp.style.width = z + 'px'; sp.style.height = z + 'px';
+      sp.style.animationDuration = (2.5 + Math.random() * 4) + 's';
+      sp.style.animationDelay = (Math.random() * 5) + 's';
+      bg.appendChild(sp);
+    }
+    for (var h = 0; h < 9; h++){
+      var ht = document.createElementNS(svgNS, 'svg'), u = document.createElementNS(svgNS, 'use');
+      ht.setAttribute('viewBox', '0 0 100 100'); ht.setAttribute('class', 'bgheart');
+      u.setAttribute('href', '#heart'); ht.appendChild(u);
+      var hs = 14 + Math.random() * 18;
+      ht.style.width = hs + 'px'; ht.style.height = hs + 'px';
+      ht.style.left = (Math.random() * 100) + '%';
+      ht.style.setProperty('--sx', (Math.random() * 80 - 40) + 'px');
+      ht.style.animationDuration = (16 + Math.random() * 14) + 's';
+      ht.style.animationDelay = (-Math.random() * 20) + 's';
+      bg.appendChild(ht);
+    }
+  }
 })();
