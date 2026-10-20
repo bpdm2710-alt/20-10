@@ -43,7 +43,7 @@
     document.getElementById('app').classList.add('opened');
     document.body.classList.add('lit');                       // dây đèn rủ xuống + bật sáng
     setTimeout(function(){ lightsPlayed = true; }, 4500);     // sau đó resize sẽ không chạy lại hiệu ứng
-    document.getElementById('sub').textContent = 'Bấm vào từng ruy băng để đọc thư.';
+    document.getElementById('sub').textContent = 'Hãy bấm từ trên xuống dưới nhé !';
     rain();
   });
 
