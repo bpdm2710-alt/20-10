@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Small Gift for a Special Person</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<title>A Small Gift for A Cute Friend</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Mali:ital,wght@0,400;0,500;1,400&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -78,24 +78,8 @@
       <path d="M50 88 C8 58 12 20 36 20 C45 20 50 28 50 33 C50 28 55 20 64 20 C88 20 92 58 50 88 Z" fill="#ff8fb3" stroke="#c2386a" stroke-width="3" stroke-linejoin="round"/>
       <path d="M30 34 C28 40 30 46 34 50" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
     </symbol>
-    <symbol id="butterfly" viewBox="0 0 100 100">
-      <path d="M50 48 C30 10 6 14 10 40 C12 56 34 58 50 48 Z M50 48 C70 10 94 14 90 40 C88 56 66 58 50 48 Z" fill="#ffb3d1" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M50 52 C34 60 20 78 32 88 C42 94 52 70 50 52 Z M50 52 C66 60 80 78 68 88 C58 94 48 70 50 52 Z" fill="#d9b8ff" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
-      <ellipse cx="50" cy="52" rx="3.5" ry="16" fill="#5b3a6e"/>
-      <path d="M48 38 q-6 -12 -12 -14 M52 38 q6 -12 12 -14" fill="none" stroke="#5b3a6e" stroke-width="2.5" stroke-linecap="round"/>
-    </symbol>
-
-    <symbol id="gift" viewBox="0 0 100 100">
-      <rect x="18" y="46" width="64" height="44" rx="4" fill="#ff9fbd" stroke="#5b3a6e" stroke-width="3"/>
-      <rect x="12" y="32" width="76" height="18" rx="4" fill="#ffc4d8" stroke="#5b3a6e" stroke-width="3"/>
-      <rect x="44" y="32" width="12" height="58" fill="#f0b94d" stroke="#5b3a6e" stroke-width="3"/>
-      <path d="M50 32 C34 8 14 18 28 30 C34 34 44 34 50 32 C56 34 66 34 72 30 C86 18 66 8 50 32 Z" fill="#f0b94d" stroke="#5b3a6e" stroke-width="3" stroke-linejoin="round"/>
-      <circle cx="50" cy="32" r="5" fill="#f6c35b" stroke="#5b3a6e" stroke-width="3"/>
-    </symbol>
   </defs>
 </svg>
-<!-- NỀN ĐỘNG: 3 vệt màu trôi chậm; sao lấp lánh + tim bay do script.js tạo -->
-<div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i></div>
 <main class="stage" id="app">
 
   <!-- HÀNG TRÊN: ảnh 1 (góc trái) - hoa - ảnh 2 (góc phải) -->
@@ -110,9 +94,6 @@
       <g id="petals"></g>
       <circle class="core" cx="100" cy="100" r="11"/>
     </svg>
-    <!-- CHI TIẾT: hai chú bướm bay quanh bông hoa -->
-    <svg class="sticker fly f1" viewBox="0 0 100 100" aria-hidden="true"><use href="#butterfly"/></svg>
-    <svg class="sticker fly f2" viewBox="0 0 100 100" aria-hidden="true"><use href="#butterfly"/></svg>
 
     <figure class="photo p2">
       <!-- CHÈN ẢNH 2 -->
@@ -122,16 +103,12 @@
   </div>
 
   <header class="intro">
-    <h1 id="title">Một ngày đặc biệt</h1>
-    <p class="sub" id="sub">Có một món quà nhỏ đang chờ bạn.</p>
+    <h1 id="title">Chúc mừng 20/10</h1>
+    <p class="sub" id="sub">Có một món quà nhỏ đang chờ em.</p>
     <button id="open" type="button">Mở quà</button>
   </header>
 
   <!-- 4 LÁ THƯ DẠNG RUY BĂNG: bấm ruy băng thì thư trải xuống -->
-  <div class="mid">
-  <!-- CHI TIẾT: hộp quà lắc lư ở chỗ trống, biến mất khi bấm Mở quà -->
-  <svg class="sticker gift" viewBox="0 0 100 100" aria-hidden="true"><use href="#gift"/></svg>
-
   <section class="letters" id="letters" aria-label="Bốn lá thư">
     <!-- STICKER: mèo ngồi trên ruy băng đầu tiên -->
     <svg class="sticker s-cat-top" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-sit"/></svg>
@@ -142,91 +119,55 @@
     <svg class="sticker side s-r2" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
 
     <article class="letter">
-      <button class="ribbon" id="r1" type="button" aria-expanded="false" aria-controls="p-1">Một vài điều nhỏ tui gửi</button>
+      <button class="ribbon" id="r1" type="button" aria-expanded="false" aria-controls="p-1">Cảm ơn em</button>
       <div class="unroll" id="p-1" role="region" aria-labelledby="r1">
         <div class="unroll-inner"><div class="paper">
-          <p>Hôm nay là 20/10, tui chúc bạn sẽ luôn mạnh khỏe nè, luôn hạnh phúc nè</p>
-          <p>Chúc bạn sẽ ngày càng xinh đẹp hơn nữa, luôn giữ được sự tự tin và hoàn thành mọi mục tiêu mà bản thân đặt ra.</p>
-          <p>Chúc bạn sẽ luôn ngủ đủ giấc này, ít burn out hơn nha.</p>
-          <p>Mong mọi deadline sẽ không làm bạn cảm thấy quá áp lực nữa nha.</p>
+          <p>Hôm nay là 20/10, nhưng điều anh muốn nói không chỉ dành cho riêng hôm nay.</p>
+          <p>Cảm ơn em vì đã kiên nhẫn với những lúc anh vụng về, vì những cuộc trò chuyện kéo dài hơn dự định, và vì đã làm cho những ngày bình thường trở nên đáng nhớ.</p>
         </div></div>
       </div>
     </article>
 
     <article class="letter">
-      <button class="ribbon" id="r2" type="button" aria-expanded="false" aria-controls="p-2">Dạo này bạn thế nào rồi</button>
+      <button class="ribbon" id="r2" type="button" aria-expanded="false" aria-controls="p-2">Điều anh nhớ</button>
       <div class="unroll" id="p-2" role="region" aria-labelledby="r2">
         <div class="unroll-inner"><div class="paper">
-          <p>Dạo này bạn thế nào rồi, điểm số với bạn bè vẫn tốt chứ, chắc không gặp lại vài teammate linh tinh nữa ha.</p>
-          <p>Không biết bạn đã dẫn em bạn đi xem doraemon chưa, bữa giờ bạn có nhiều công việc ở HSV không, có hay bị burn out kh. Tui thật sự có hàng tá thứ muốn hỏi về bạn dạo này.</p>
+          <p>Có những khoảnh khắc rất nhỏ mà anh vẫn nhớ: một câu nói đùa, một buổi chiều đi cùng nhau, một lần em cười vì chuyện chẳng đâu vào đâu.</p>
+          <p>Với anh, chính những điều đó làm nên chúng mình.</p>
         </div></div>
       </div>
     </article>
 
     <article class="letter">
-      <button class="ribbon" id="r3" type="button" aria-expanded="false" aria-controls="p-3">About me</button>
+      <button class="ribbon" id="r3" type="button" aria-expanded="false" aria-controls="p-3">Lời chúc</button>
       <div class="unroll" id="p-3" role="region" aria-labelledby="r3">
         <div class="unroll-inner"><div class="paper">
           <ul class="wishes">
-            <li>Dạo này tui vẫn ổn, tui đang cố gắng để kiếm thêm 1 học bổng nữa.</li>
-            <li>Mà công nhận là làm nhóm mệt thiệt nha, tui đang lead 1 nhóm 12 người trong 1 môn về quản trị dữ liệu, công nhận làm lead mệt thiệt nha, 1 đống đầu việc.</li>
-            <li>U know, i am starting to learn a third language, it is chinese. And i quit my job too.</li>
+            <li>Chúc em ngủ đủ giấc và ăn thật ngon miệng.</li>
+            <li>Chúc mọi deadline của em đều dễ thở hơn em nghĩ.</li>
+            <li>Và luôn có anh ở bên mỗi khi em cần.</li>
           </ul>
         </div></div>
       </div>
     </article>
 
     <article class="letter">
-      <button class="ribbon" id="r4" type="button" aria-expanded="false" aria-controls="p-4">Tui sợ bạn cảm thấy không thoải mái nên</button>
+      <button class="ribbon" id="r4" type="button" aria-expanded="false" aria-controls="p-4">Lời hứa</button>
       <div class="unroll" id="p-4" role="region" aria-labelledby="r4">
         <div class="unroll-inner"><div class="paper">
-          <p>Dạo trước tui lướt tiktok thì nó đề xuất cái video content của bạn về lúc bạn về nhà bằng xe đò, tui thấy nó giống tui đó chứ, mấy đợt tui đi cũng vậy, để lên thăm nội tui.</p>
-          <p>Mặc dù bạn đeo khẩu trang và nó chỉ tình cờ đề xuất lên feed của tui thôi, nên lúc đầu tui chỉ thấy quen quen thôi chứ chưa nhìn ra, tui bấm vô thử thì biết đó là TikTok của bạn.</p>
-          <p class="sign" id="sign">From a guy who cares about you</p>
+          <p>Anh hứa sẽ lắng nghe nhiều hơn, bớt vụng về hơn, và luôn nhớ rằng em cũng đang cố gắng mỗi ngày.</p>
+          <p>Anh không giỏi nói lời hoa mỹ, nên anh làm món quà này bằng thứ anh biết làm: một trang web. Mong em thích nó.</p>
+          <p class="sign" id="sign">Từ anh</p>
         </div></div>
       </div>
     </article>
 
   </section>
 
-  <!-- 2 LÁ THƯ BÍ MẬT: mở đủ 4 lá ở giữa thì hiện lá BÊN PHẢI; mở lá phải thì hiện lá BÊN TRÁI.
-       Bố cục giống "Lời chúc". Sửa tiêu đề ruy băng và các dòng <li> bên dưới. -->
-  <aside class="extra extra-right" id="extra-right">
-    <svg class="sticker x1" viewBox="0 0 100 100" aria-hidden="true"><use href="#heart"/></svg>
-    <svg class="sticker x2" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
-    <article class="letter">
-      <button class="ribbon" id="r5" type="button" aria-expanded="false" aria-controls="p-5">Còn một điều nữa</button>
-      <div class="unroll" id="p-5" role="region" aria-labelledby="r5">
-        <div class="unroll-inner"><div class="paper">
-          <ul class="wishes">
-            <li>Tui không giỏi thiết kế lắm nhưng mà tui thích kiểu đối xứng nên bạn biết khó như thế nào để tìm được 1 bó hoa tương xứng để đặt vô không.</li>
-            <li>Tui biết bởi vì để tìm được 1 bó hoa tương xứng là một điều không dễ, bởi vì your beauty is not something flowers can compare with.</li>
-          </ul>
-        </div></div>
-      </div>
-    </article>
-  </aside>
-
-  <aside class="extra extra-left" id="extra-left">
-    <svg class="sticker x1" viewBox="0 0 100 100" aria-hidden="true"><use href="#tulip"/></svg>
-    <svg class="sticker x2" viewBox="0 0 100 100" aria-hidden="true"><use href="#cat-sit"/></svg>
-    <article class="letter">
-      <button class="ribbon" id="r6" type="button" aria-expanded="false" aria-controls="p-6">A last message</button>
-      <div class="unroll" id="p-6" role="region" aria-labelledby="r6">
-        <div class="unroll-inner"><div class="paper">
-          <ul class="wishes">
-            <li>I know now is not the right time, but I want you to know that I can and I will wait for the right time to come.</li>
-          </ul>
-        </div></div>
-      </div>
-    </article>
-  </aside>
-  </div>
-
   <!-- HÀNG DƯỚI: ảnh 3 (góc trái) - ngày - ảnh 4 (góc phải) -->
   <div class="row bottom">
     <figure class="photo p3">
-      <!-- CHÈN ẢNH 3 (ảnh 3 và 4 chỉ hiện sau khi bấm Mở quà) -->
+      <!-- CHÈN ẢNH 3 -->
       <div class="slot"><span>Ảnh 3</span><img src="images/anh3.jpg" alt="Ảnh kỷ niệm 3" onerror="this.remove()"></div>
       <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#tulip"/></svg>
     </figure>
@@ -237,8 +178,8 @@
       <div class="date">20 tháng 10</div>
     </div>
 
-    <figure class="photo p4 landscape">
-      <!-- CHÈN ẢNH 4 (khung nằm ngang: class "landscape") -->
+    <figure class="photo p4">
+      <!-- CHÈN ẢNH 4 -->
       <div class="slot"><span>Ảnh 4</span><img src="images/anh4.jpg" alt="Ảnh kỷ niệm 4" onerror="this.remove()"></div>
       <svg class="sticker" viewBox="0 0 100 100" aria-hidden="true"><use href="#daisy"/></svg>
     </figure>
